@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+	<meta http-equiv='Content-Type' content='test/html; charset=UTF-8'>
+	<head>
+		<style>
+			body {
+				background-color: rgb(255, 250, 250);
+			}
+			div {
+				width: 100vw;
+				height: 100vh;
+				display: table;
+			}
+			#name {
+				text-align: center;
+				display: table-cell;
+				vertical-align: middle;
+				font-size: 7rem;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<h1 id="name"></h1>
+		</div>
+		<script type="text/javascript">
+			var quotes = [
+				'Alla bögar hyr skräckfilmer',
+				'Köp min vaginajacka',
+				'Nu ska jag Googla på "plommonplantage i Serbien"',
+			];
+			var titles = [
+				'The man, the myth, the legend..',
+			];
+			Array.prototype.getRandom = function () {
+				return this[Math.floor(Math.random() * this.length)];
+			};
+			document.getElementById("name").innerText = quotes.getRandom();
+			document.title = titles.getRandom();
+		</script>
+	</body>
+</html>
