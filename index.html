@@ -35,7 +35,7 @@
 			Array.prototype.getRandom = function () {
 				return this[Math.floor(Math.random() * this.length)];
 			};
-			document.getElementById("name").innerText = quotes.getRandom();
+			document.getElementById("name").textContent = quotes.getRandom();
 			document.title = titles.getRandom();
 		</script>
 	</body>
